@@ -11,6 +11,9 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
@@ -116,6 +119,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1maYZqUHK6yq8MpbkvD24hkkmZ1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -125,6 +129,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -147,7 +152,7 @@
       <workItem from="1609866640445" duration="5288000" />
       <workItem from="1609904157372" duration="898000" />
       <workItem from="1609951260987" duration="5858000" />
-      <workItem from="1609990433595" duration="9904000" />
+      <workItem from="1609990433595" duration="12031000" />
     </task>
     <servers />
   </component>
@@ -155,22 +160,34 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="402" y="163" key="#com.jetbrains.php.refactoring.pullPush.pushDown.PhpPushDownDialog#" timestamp="1610001328857">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="163" key="#com.jetbrains.php.refactoring.pullPush.pushDown.PhpPushDownDialog#/0.0.1366.728@0.0.1366.728" timestamp="1610001328857" />
+    <state x="409" y="42" key="FileChooserDialogImpl" timestamp="1610002921652">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="409" y="42" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610002921652" />
+    <state x="74" y="0" key="SettingsEditor" timestamp="1610003027155">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="74" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610003027155" />
     <state x="278" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609954795764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1609954795764" />
-    <state x="328" y="32" width="710" height="664" key="find.popup" timestamp="1609991188574">
+    <state x="328" y="32" width="710" height="664" key="find.popup" timestamp="1610001345963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="32" width="710" height="664" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1609991188574" />
+    <state x="328" y="32" width="710" height="664" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610001345963" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1609954411099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609954411099" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1609734930734">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1610002240986">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1609734930734" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610002240986" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
