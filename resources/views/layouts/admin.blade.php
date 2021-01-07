@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>AdminLTE 3 | Starter</title>
+    <title>Admin | Blog</title>
 
     <!-- toastr.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
@@ -178,7 +178,7 @@
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
-                                Home
+                                Starter Page
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -255,8 +255,12 @@
 <script>
     @if(session('success'))
     toastr.success("{{session('success')}}");
-
     @endif
+
+    @if(session('warningMsg'))
+    toastr.warning("{{session('warningMsg')}}");
+    @endif
+
 
     @if ($errors->any())
     @foreach ($errors->all() as $error)

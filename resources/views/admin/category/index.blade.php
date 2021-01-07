@@ -55,15 +55,15 @@
                                     <td class="d-flex">
                                         <a href="{{ route('category.edit', $category->id) }}" class="btn btn-info mr-1"> <i class="fa fa-edit"></i> </a>
 
-                                        <form action="{{ route('category.destroy',$category->id) }}" class="mr-1">
+                                        <form action="{{ route('category.destroy',$category->id) }}" class="mr-1" method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <buttoon type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> </buttoon>
+                                            <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> </button>
 
                                         </form>
 
 
-                                        <a href="{{ route('category.show',$category->id) }}" class="btn btn-success"> <i class="fa fa-eye"></i> </a>
+                                        <a href="{{ route('category.show',$category->id) }}" class="btn btn-success" data-toggle="modal" data-target="#view"> <i class="fa fa-eye"></i> </a>
 
 
                                     </td>
@@ -78,6 +78,46 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="view" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Category Tittle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>Name: </td>
+                                <td>Mobile phone</td>
+                            </tr>
+                            <tr>
+                                <td>Slug: </td>
+                                <td>mobile-phone</td>
+                            </tr>
+                            <tr>
+                                <td>Discription: </td>
+                                <td>mobile-phone mobile-phone mobile-phone mobile-phone</td>
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>0
+    <!-- End Modal -->
 
 
 @endsection

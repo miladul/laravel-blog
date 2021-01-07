@@ -92,8 +92,12 @@ class CategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         //validate
+        /*$this->validate($request,[
+            'name' => "required|unique:categories,name,$category->name",
+            ]);*/
+
         $request->validate([
-            'name' => ['required', "unique:categories,name,$category->name"],
+            'name' => 'required|unique:categories,name,'.$category->id,
         ]);
 
         $category->name = $request->name;
@@ -113,6 +117,10 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        if($category){
+            $category->delete();
+            return redirect()->back()->with('warningMsg','Category has been deleted');
+        }
+
     }
 }
