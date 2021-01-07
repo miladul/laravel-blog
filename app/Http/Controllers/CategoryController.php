@@ -101,7 +101,7 @@ class CategoryController extends Controller
         $category->discription = $request->discription;
         $category->save();
 
-        return redirect()->back()->with('success','Category updated');
+        return redirect()->back()->with('success','Category updated successfully');
 
     }
 
