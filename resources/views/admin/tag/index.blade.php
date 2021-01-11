@@ -7,12 +7,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Category List</h1>
+                    <h1 class="m-0 text-dark">Tag List</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{route('website')}}">Home</a></li>
-                        <li class="breadcrumb-item active">Category</li>
+                        <li class="breadcrumb-item active">Tag</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -29,8 +29,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="d-flex justify-content-between align-items-center">
-                                <h3 class="card-title">Category List</h3>
-                                <a class="btn btn-primary" href="{{ route('category.create')}}">Create Category</a>
+                                <h3 class="card-title">Tag List</h3>
+                                <a class="btn btn-primary" href="{{ route('tag.create')}}">Create Tag</a>
                             </div>
                         </div>
                         <!-- /.card-header -->
@@ -46,29 +46,35 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $category)
+                                @if($tags->count())
+                                @foreach($tags as $tag)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->slug }}</td>
-                                    <td>{{ $category->id }}</td>
+                                    <td>{{ $tag->id }}</td>
+                                    <td>{{ $tag->name }}</td>
+                                    <td>{{ $tag->slug }}</td>
+                                    <td>{{ $tag->id }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('category.edit', $category->id) }}" class="btn btn-info mr-1"> <i class="fa fa-edit"></i> </a>
+                                        <a href="{{ route('tag.edit', $tag->id) }}" class="btn btn-info mr-1"> <i class="fa fa-edit"></i> </a>
 
-                                        <form action="{{ route('category.destroy',$category->id) }}" class="mr-1" method="POST">
+                                        <tag.blaform action="{{ route('tag.destroy',$tag->id) }}" class="mr-1" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> </button>
 
-                                        </form>
+                                        </tag.blaform>
 
 
-                                        <a href="{{ route('category.show',$category->id) }}" class="btn btn-success" data-toggle="modal" data-target="#view"> <i class="fa fa-eye"></i> </a>
+                                        <a href="{{ route('tag.show',$tag->id) }}" class="btn btn-success" data-toggle="modal" data-target="#view"> <i class="fa fa-eye"></i> </a>
 
 
                                     </td>
                                 </tr>
                                 @endforeach
+                                @else
+                                    <tr>
+                                        <td class="text-center" colspan="5">Tag not Found</td>
+                                    </tr>
+                                @endif
                                 </tbody>
                             </table>
                         </div>
@@ -85,7 +91,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Category Tittle</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tag Tittle</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

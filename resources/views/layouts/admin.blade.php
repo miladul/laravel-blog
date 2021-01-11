@@ -190,11 +190,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inactive Page</p>
+                                <a href="{{ route('tag.index') }}" class="nav-link">
+                                    <i class="fas fa-tag"></i>
+                                    <p>Tag</p>
                                 </a>
                             </li>
+
                         </ul>
                     </li>
                     <li class="nav-item bg-danger">
