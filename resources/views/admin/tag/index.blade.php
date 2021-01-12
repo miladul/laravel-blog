@@ -65,7 +65,7 @@
                                         </form>
 
 
-                                        <a href="{{ route('tag.show',$tag->id) }}" class="btn btn-success" data-toggle="modal" data-target="#view"> <i class="fa fa-eye"></i> </a>
+                                        <a href="{{ route('tag.show',$tag->id) }}" class="btn btn-success" {{--data-toggle="modal" data-target="#view" --}}> <i class="fa fa-eye"></i> </a>
 
 
                                     </td>

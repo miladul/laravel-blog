@@ -61,7 +61,8 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view('admin.tag.single-tag',compact('tag'));
+
     }
 
     /**
@@ -85,7 +86,7 @@ class TagController extends Controller
     public function update(Request $request, Tag $tag)
     {
         $request->validate([
-            'name' => 'required|unique:categories,name,'.$tag->id,
+            'name' => 'required|unique:tags,name,'.$tag->id,
         ]);
         $tag->name = $request->name;
         $tag->slug = Str::slug($request->name, '-');
