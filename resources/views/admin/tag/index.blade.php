@@ -46,7 +46,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if($tags->count())
+                                @if($tags->count()>0)
                                     {{--fjhhfj--}}
                                 @foreach($tags as $tag)
                                 <tr>
@@ -57,12 +57,12 @@
                                     <td class="d-flex">
                                         <a href="{{ route('tag.edit', $tag->id) }}" class="btn btn-info mr-1"> <i class="fa fa-edit"></i> </a>
 
-                                        <tag.blaform action="{{ route('tag.destroy',$tag->id) }}" class="mr-1" method="POST">
+                                        <form action="{{ route('tag.destroy',$tag->id) }}" class="mr-1" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="btn btn-danger"> <i class="fa fa-trash"></i> </button>
 
-                                        </tag.blaform>
+                                        </form>
 
 
                                         <a href="{{ route('tag.show',$tag->id) }}" class="btn btn-success" data-toggle="modal" data-target="#view"> <i class="fa fa-eye"></i> </a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TagController extends Controller
 {
@@ -27,7 +28,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tag.create');
     }
 
     /**
@@ -38,7 +39,18 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        //validate
+        $request->validate([
+            'name' => ['required', 'unique:tags,name']
+        ]);
+
+        $tags = Tag::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name,'-'),
+            'description' => $request->description,
+        ]);
+        return redirect()->back()->with('success','Tag inserted');
     }
 
     /**
@@ -60,7 +72,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        return view('admin.tag.edit',compact('tag'));
     }
 
     /**
@@ -72,7 +84,15 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:categories,name,'.$tag->id,
+        ]);
+        $tag->name = $request->name;
+        $tag->slug = Str::slug($request->name, '-');
+        $tag->description = $request->description;
+        $tag->save();
+
+        return redirect()->back()->with('success','Tag updated successfully');
     }
 
     /**
@@ -83,6 +103,9 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        if($tag){
+            $tag->delete();
+            return redirect()->back()->with('warningMsg','Category has been deleted');
+        }
     }
 }

@@ -21,6 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ea2c6e31-830e-40d5-a249-ed1c2e145251" name="Default Changelist" comment="create tag">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +199,8 @@
       <workItem from="1609904157372" duration="898000" />
       <workItem from="1609951260987" duration="5858000" />
       <workItem from="1609990433595" duration="18879000" />
-      <workItem from="1610380588465" duration="5357000" />
+      <workItem from="1610380588465" duration="7029000" />
+      <workItem from="1610422055831" duration="4359000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1610003088415</created>
@@ -260,10 +266,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="208" y="168" width="949" height="391" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1610381555611" />
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610386283747">
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610422578514">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610386283747" />
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610422578514" />
     <state x="402" y="163" key="#com.jetbrains.php.refactoring.pullPush.pushDown.PhpPushDownDialog#" timestamp="1610001328857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -292,10 +298,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1609954795764" />
-    <state x="328" y="0" width="710" height="728" key="find.popup" timestamp="1610386214576">
+    <state x="328" y="0" width="710" height="728" key="find.popup" timestamp="1610424677320">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610386214576" />
+    <state x="328" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610424677320" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1609954411099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

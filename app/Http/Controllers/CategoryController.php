@@ -49,13 +49,7 @@ class CategoryController extends Controller
             'discription' => $request->discription,
         ]);
 
-
-        //https://youtu.be/Vs6UFj6vz5M?list=PLl4v4A2HI0YixTm5AsoTu-sKxiQti4-r6&t=930
-
-        //Session::flash('success','Categorie created successfully');
-        //Session::flash('message', 'This is a message!');
         return redirect()->back()->with('success','Category inserted');
-        //dd($request->all());
     }
 
     /**
@@ -91,11 +85,6 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //validate
-        /*$this->validate($request,[
-            'name' => "required|unique:categories,name,$category->name",
-            ]);*/
-
         $request->validate([
             'name' => 'required|unique:categories,name,'.$category->id,
         ]);
