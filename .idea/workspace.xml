@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea2c6e31-830e-40d5-a249-ed1c2e145251" name="Default Changelist" comment="create tag">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tag/single-tag.blade.php" afterDir="false" />
+    <list default="true" id="ea2c6e31-830e-40d5-a249-ed1c2e145251" name="Default Changelist" comment="fix tag issues">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/post/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/post/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/post/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/tag/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,19 +164,19 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/tag" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\miladul\XAMPP\htdocs\LaravelProject\blog\resources\views\admin\tag" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\miladul\XAMPP\htdocs\LaravelProject\blog\resources\views\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\miladul\XAMPP\htdocs\LaravelProject\blog\resources\views\admin" />
+      <recent name="E:\miladul\XAMPP\htdocs\LaravelProject\blog\resources\views\admin\tag" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,7 +201,11 @@
       <workItem from="1609951260987" duration="5858000" />
       <workItem from="1609990433595" duration="18879000" />
       <workItem from="1610380588465" duration="7029000" />
-      <workItem from="1610422055831" duration="7541000" />
+      <workItem from="1610422055831" duration="12909000" />
+      <workItem from="1610439601707" duration="57000" />
+      <workItem from="1615010534903" duration="1963000" />
+      <workItem from="1615050354012" duration="5488000" />
+      <workItem from="1615087963330" duration="65000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1610003088415</created>
@@ -220,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610387536481</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix tag issues">
+      <created>1610431466797</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610431466797</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +267,8 @@
     <MESSAGE value="test commit" />
     <MESSAGE value="test commit by Miladul" />
     <MESSAGE value="create tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="create tag" />
+    <MESSAGE value="fix tag issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix tag issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="383" y="145" key="#Notifications" timestamp="1610387605134">
@@ -263,10 +279,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="208" y="168" width="949" height="391" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1610381555611" />
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610422578514">
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615054670917">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610422578514" />
+    <state x="347" y="59" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1615054670917" />
     <state x="402" y="163" key="#com.jetbrains.php.refactoring.pullPush.pushDown.PhpPushDownDialog#" timestamp="1610001328857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -275,10 +291,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="55" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1610003385048" />
-    <state x="409" y="42" key="FileChooserDialogImpl" timestamp="1610014751710">
+    <state x="409" y="42" key="FileChooserDialogImpl" timestamp="1610439655854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="409" y="42" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610014751710" />
+    <state x="409" y="42" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610439655854" />
     <state x="74" y="0" key="SettingsEditor" timestamp="1610387737490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -287,26 +303,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="510" y="222" key="VCS.EditChangelistDialog/0.0.1366.728@0.0.1366.728" timestamp="1610004156060" />
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1610387574171">
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1610431480355">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610387574171" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610431480355" />
     <state x="278" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609954795764">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="278" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1609954795764" />
-    <state x="328" y="0" width="710" height="728" key="find.popup" timestamp="1610424677320">
+    <state x="328" y="0" width="710" height="728" key="find.popup" timestamp="1615054288512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1610424677320" />
+    <state x="328" y="0" width="710" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1615054288512" />
     <state x="255" y="159" key="run.anything.popup" timestamp="1609954411099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="255" y="159" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609954411099" />
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1610002240986">
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1615053948099">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610002240986" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615053948099" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
