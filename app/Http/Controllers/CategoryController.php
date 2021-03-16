@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-       echo view('admin.category.create');
+       return view('admin.category.create');
     }
 
     /**
@@ -85,6 +85,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        //dd($request);
         $request->validate([
             'name' => 'required|unique:categories,name,'.$category->id,
         ]);

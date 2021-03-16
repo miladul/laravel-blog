@@ -1,7 +1,14 @@
+<?php
+//category store in array key=>value
+//category store in array id=>name
+$categoryArray = [];
+foreach ($categories as $category){
+    $categoryArray[$category->id] = $category->name;
+}
+?>
+
 @extends('layouts.admin')
-
 @section('content')
-
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -11,7 +18,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('website')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                         <li class="breadcrumb-item active">Post</li>
                     </ol>
                 </div><!-- /.col -->
@@ -41,6 +48,7 @@
                                     <th style="width: 10px">#</th>
                                     <th>Image</th>
                                     <th>Title</th>
+                                    <th>Slug</th>
                                     <th>Category</th>
                                     <th>Author</th>
                                     <th>Action</th>
@@ -53,12 +61,12 @@
                                     <td>{{ $post->id }}</td>
                                     <td>
                                         <div style="max-height: 70px; max-width: 70px; overflow: hidden">
-                                            <img src="{{ asset('$post->image') }}" class="image-fluid" alt="Image">
-
+                                            <img src="{{ asset('/assets/post/img/')}}/{{ $post->image }}" class="image-fluid" alt="Image" width="50px">
                                         </div>
                                     </td>
+                                    <td>{{ $post->title }}</td>
                                     <td>{{ $post->slug }}</td>
-                                    <td>{{ $post->id }}</td>
+                                    <td>{{ $categoryArray[$post->category_id] }}</td>
                                     <td class="d-flex">
                                         <a href="{{ route('post.edit', $post->id) }}" class="btn btn-info mr-1"> <i class="fa fa-edit"></i> </a>
 

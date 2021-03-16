@@ -195,6 +195,12 @@
                                     <p>Tag</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('post.index') }}" class="nav-link">
+                                    <i class="fas fa-tag"></i>
+                                    <p>Post</p>
+                                </a>
+                            </li>
 
                         </ul>
                     </li>

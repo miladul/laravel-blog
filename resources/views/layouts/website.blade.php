@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Mini Blog</title>
+    <title>My Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -44,18 +44,18 @@
                 </div>
 
                 <div class="col-4 site-logo">
-                    <a href="index.html" class="text-black h2 mb-0">Mini Blog</a>
+                    <a href="{{ route('home') }}" class="text-black h2 mb-0">My Blog</a>
                 </div>
 
                 <div class="col-8 text-right">
                     <nav class="site-navigation" role="navigation">
                         <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-                            <li><a href="category.html">Home</a></li>
-                            <li><a href="category.html">Politics</a></li>
-                            <li><a href="category.html">Tech</a></li>
-                            <li><a href="category.html">Entertainment</a></li>
-                            <li><a href="category.html">Travel</a></li>
-                            <li><a href="category.html">Sports</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="">Politics</a></li>
+                            <li><a href="">Tech</a></li>
+                            <li><a href="">Entertainment</a></li>
+                            <li><a href="">Travel</a></li>
+                            <li><a href="">Sports</a></li>
                             <li class="d-none d-lg-inline-block"><a href="#" class="js-search-toggle"><span class="icon-search"></span></a></li>
                         </ul>
                     </nav>

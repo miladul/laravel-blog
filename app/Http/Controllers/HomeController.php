@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Post;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categories = Category::all();
+        $users = User::all();
+        $posts = Post::orderBy('created_at','DESC')->where(['status'=>1])->paginate(6);
+        return view('website.home',compact('posts','categories','users'));
     }
 }

@@ -6,10 +6,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', function () {
-    return view('website.home');
-})->name('website');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/single-post/{id}', 'PostController@singlePost')->name('single-post');
+
 Route::get('/about', function () {
     return view('website.about');
 });
@@ -36,6 +35,7 @@ Route::group(['prefix'=>'admin','middlewire'=>'auth.'], function(){
 
     Route::resource('category','CategoryController');
     Route::resource('tag','TagController');
+    Route::resource('post','PostController');
 
 });
 
