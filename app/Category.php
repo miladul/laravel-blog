@@ -10,4 +10,9 @@ class Category extends Model
     /**
      * @var mixed
      */
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

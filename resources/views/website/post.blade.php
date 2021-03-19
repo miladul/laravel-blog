@@ -62,108 +62,41 @@
 
 
             <div class="pt-5">
-              <h3 class="mb-5">6 Comments</h3>
+              <h3 class="mb-5">Comments</h3>
               <ul class="comment-list">
+                  @foreach($post->comments as $comment)
                 <li class="comment">
                   <div class="vcard">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
+                    <img src="{{asset('website')}}/images/person_1.jpg" alt="Image placeholder">
                   </div>
                   <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
+                    <h3>{{ $comment->commenter_name }}</h3>
+                    <div class="meta">{{ date_format( date_create($comment->created_at),"M d, Y h:i A") }}</div>
+                    <p>{{ $comment->comment }}</p>
                   </div>
                 </li>
+                  @endforeach
 
-                <li class="comment">
-                  <div class="vcard">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
-                  </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>Jean Doe</h3>
-                        <div class="meta">January 9, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply rounded">Reply</a></p>
-                      </div>
-
-
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>Jean Doe</h3>
-                            <div class="meta">January 9, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply rounded">Reply</a></p>
-                          </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard">
-                                  <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>Jean Doe</h3>
-                                  <div class="meta">January 9, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                  <p><a href="#" class="reply rounded">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="comment">
-                  <div class="vcard">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply rounded">Reply</a></p>
-                  </div>
-                </li>
               </ul>
               <!-- END comment-list -->
 
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="#" class="p-5 bg-light">
+                <form action="{{ route('comments.store') }}" method="POST" class="p-5 bg-light">
+                    @csrf
                   <div class="form-group">
                     <label for="name">Name *</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="hidden" class="form-control" name="post_id" id="post_id" value="{{ $post->id }}">
+                    <input type="text" class="form-control" name="commenter_name" id="commenter_name">
                   </div>
                   <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="website">Website</label>
-                    <input type="url" class="form-control" id="website">
+                    <input type="email" class="form-control" name="commenter_email" id="commenter_email">
                   </div>
 
                   <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <label for="message">Your Comment</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10" class="form-control"></textarea>
                   </div>
                   <div class="form-group">
                     <input type="submit" value="Post Comment" class="btn btn-primary">
@@ -240,26 +173,19 @@
             <div class="sidebar-box">
               <h3 class="heading">Categories</h3>
               <ul class="categories">
+                  @foreach($categories as $category)
+                      <li><a href="#">{{ $category->name }} <span>({{ $category->posts->count() }})</span></a></li>
+                  @endforeach
                   <?php
-                 /* foreach ($allPosts as $allPost){
-                      echo $allPost->category_id;
-                  }*/
-
+/*
                   $allPostArray = [];
                   foreach ($allPosts as $allPost){
                       $allPostArray[$allPost->category_id] = App\Post::where(['category_id'=>$allPost->category_id])->get()->count();
                   }
-                  ?>
-                  @foreach($categories as $category)
+                  */?>
+                  {{--@foreach($categories as $category)
                 <li><a href="#">{{ $category->name }} <span>({{ $allPostArray[$category->id] }})</span></a></li>
-                  @endforeach
-
-
-                  {{--
-                <li><a href="#">Travel <span>(22)</span></a></li>
-                <li><a href="#">Lifestyle <span>(37)</span></a></li>
-                <li><a href="#">Business <span>(42)</span></a></li>
-                <li><a href="#">Adventure <span>(14)</span></a></li>--}}
+                  @endforeach--}}
               </ul>
             </div>
             <!-- END sidebar-box -->

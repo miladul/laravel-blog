@@ -7,6 +7,9 @@
 
     <link href="../../css.css?family=Muli:300,400,700|Playfair+Display:400,700,900" rel="stylesheet">
 
+    <!-- toastr.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+
     <link rel="stylesheet" href="{{asset('website')}}/fonts/icomoon/style.css">
     <link rel="stylesheet" href="{{asset('website')}}/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('website')}}/css/magnific-popup.css">
@@ -133,6 +136,7 @@
 <script src="{{asset('website')}}/js/jquery.magnific-popup.min.js"></script>
 <script src="{{asset('website')}}/js/bootstrap-datepicker.min.js"></script>
 <script src="{{asset('website')}}/js/aos.js"></script>
+<script src="https://codeseven.github.io/toastr/build/toastr.min.js"></script>
 
 <script src="{{asset('website')}}/js/main.js"></script>
 
@@ -144,6 +148,22 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-23581568-13');
+</script>
+<script>
+    @if(session('success'))
+    toastr.success("{{session('success')}}");
+    @endif
+
+    @if(session('warningMsg'))
+    toastr.warning("{{session('warningMsg')}}");
+    @endif
+
+
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+    toastr.error('{{ $error }}');
+    @endforeach
+    @endif
 </script>
 
 </body>
